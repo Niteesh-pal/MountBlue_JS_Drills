@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const filePath = './lipsum.txt';
 
-function fsProblem2(filePath, convertUpperCase, convertLowerCase) {
+function main(filePath, convertUpperCase, convertLowerCase) {
   fs.readFile(filePath, 'utf-8', (err, data) => {
     if (err) {
       console.log(err);
@@ -142,4 +142,8 @@ function deleteFile() {
   });
 }
 
-fsProblem2(filePath, convertUpperCase, convertLowerCase);
+function fsProblem2(filePath) {
+  main(filePath, convertUpperCase, convertLowerCase);
+}
+
+fsProblem2(filePath);
