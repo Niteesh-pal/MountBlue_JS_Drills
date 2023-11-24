@@ -1,3 +1,0 @@
-convertToUpperCase.txt
-covertToLowerCaseSentence.txt
-sortContentToFile.txt
