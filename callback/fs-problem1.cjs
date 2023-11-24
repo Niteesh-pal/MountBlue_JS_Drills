@@ -3,7 +3,7 @@ const fs = require('fs');
 let randomNumberOfFiles = (Math.random() + 1) * 5;
 randomNumberOfFiles = Math.floor(randomNumberOfFiles);
 
-const absolutePath = './callback/output';
+const absolutePath = './output';
 
 function fsProblem1(path, randomFiles) {
   fs.access(path + '/fsProblem1', (err) => {
@@ -13,16 +13,20 @@ function fsProblem1(path, randomFiles) {
           console.log(err);
         } else {
           console.log();
-          createRandomFiles(path + '/fsProblem1/', randomFiles);
+          createRandomFiles(
+            path + '/fsProblem1/',
+            randomFiles,
+            deleteRandomFiles
+          );
         }
       });
     } else {
-      createRandomFiles(path + '/fsProblem1/', randomFiles);
+      createRandomFiles(path + '/fsProblem1/', randomFiles, deleteRandomFiles);
     }
   });
 }
 
-function createRandomFiles(path, randomFiles) {
+function createRandomFiles(path, randomFiles, deleteRandomFiles) {
   for (let i = 1; i <= randomFiles; i++) {
     fs.writeFile(path + `file${i}.txt`, '', (err) => {
       if (err) {
