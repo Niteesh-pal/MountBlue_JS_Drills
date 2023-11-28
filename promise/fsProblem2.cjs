@@ -1,5 +1,4 @@
 const fs = require('fs').promises;
-const filepath = './output/fsProblem2';
 
 function readFileContent(path) {
   return fs
@@ -49,7 +48,7 @@ function sortNewFile(content, fileName, path) {
     .catch((err) => console.log(`Error while writting ${fileName}: ${err}`));
 }
 
-function deleteFiles(content) {
+function deleteFiles(filepath, content) {
   const list = content.split('\n');
 
   for (let i = 0; i < list.length - 1; i++) {
@@ -90,10 +89,12 @@ function fsProblem2(filepath) {
     .then((data) => sortNewFile(data, 'sortContent.txt', filepath))
     .then(() => storeFileName('sortContent.txt', './filenames.txt'))
     .then(() => readFileContent(`./filenames.txt`))
-    .then((content) => deleteFiles(content))
+    .then((content) => deleteFiles(filepath, content))
     .catch((err) => {
       console.log(err);
     });
 }
 
-fsProblem2(filepath);
+// fsProblem2(filepath);
+
+module.exports.fsProblem2 = fsProblem2;
