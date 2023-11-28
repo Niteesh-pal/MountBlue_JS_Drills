@@ -134,7 +134,7 @@ function deleteFile() {
           if (err) {
             console.log(err);
           } else {
-            console.log('succesfully deleted');
+            console.log(`succesfully deleted ${list[i]}`);
           }
         });
       }
