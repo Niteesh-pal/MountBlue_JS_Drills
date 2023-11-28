@@ -1,10 +1,6 @@
-const { rejects } = require('assert');
 const fs = require('fs');
-const { resolve } = require('path');
-const pathOfDirectory = './output/fsProblem1';
-const randomNumberOfFiles = Math.floor(Math.random() * 10) + 1;
 
-function checkDir() {
+function checkDir(pathOfDirectory) {
   return new Promise((resovle, reject) => {
     fs.stat(pathOfDirectory, (err) => {
       if (err) {
@@ -80,4 +76,4 @@ function fsProblem1(pathOfDirectory, randomNumberOfFiles) {
     });
 }
 
-fsProblem1(pathOfDirectory, randomNumberOfFiles);
+module.exports.fsProblem1 = fsProblem1;
