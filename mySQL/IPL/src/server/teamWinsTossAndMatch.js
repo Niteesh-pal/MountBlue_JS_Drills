@@ -1,5 +1,8 @@
 function teamWinsTossAndMatch(connection, tableName) {
-  const sqlQuery = `SELECT toss_winner , COUNT(winner) FROM cricketMatches WHERE toss_winner = winner GROUP BY toss_winner`;
+  const sqlQuery = `SELECT toss_winner , COUNT(winner) 
+  FROM cricketMatches 
+  WHERE toss_winner = winner 
+  GROUP BY toss_winner`;
 
   connection
     .query(sqlQuery)

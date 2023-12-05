@@ -1,5 +1,5 @@
 function matchesPlayedPerYear(connection, tableName) {
-  const matchesQuery = `SELECT season, COUNT(season) FROM ${tableName} GROUP BY  season`;
+  const matchesQuery = `SELECT season, COUNT(season) AS season_count FROM ${tableName} GROUP BY  season`;
   connection
     .query(matchesQuery)
     .then((data) => console.log(data[0]))
