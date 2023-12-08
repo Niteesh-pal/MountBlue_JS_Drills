@@ -95,6 +95,4 @@ function fsProblem2(filepath) {
     });
 }
 
-// fsProblem2(filepath);
-
 module.exports.fsProblem2 = fsProblem2;
