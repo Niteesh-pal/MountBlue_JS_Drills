@@ -1,4 +1,4 @@
-const price = ['199.90', '249.9', '399.99'];
+const price = ['199.99', '249.99', '399.99'];
 const originalPrice = ['19.99', '24.99', '39.99'];
 
 function hello() {
