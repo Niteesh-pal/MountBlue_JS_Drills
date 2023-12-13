@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="index.js"></script>
+    <title>Pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+<link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+
+      <div class="heading">
+        <h1>Our Pricing</h1>
+        <div class="option">
+          <h3>Anually</h3>
+          <div class="toggle">
+            <input type="checkbox" id="check" onclick="hello()">
+            <label for="check" class="button"></label>
+          </div>
+          <h3>Monthly</h3>
+        </div>
+      </div>
+
+      <div class="content">
+
+        <div class="card active">
+          <h4>Basic</h4>
+          <h2 class="price"><span class="dollar">&dollar;</span>19.99</h2>
+          <div class="details">
+            <ul>
+              <li>50 GB Storage</li>
+              <li>2 Users Allowed</li>
+              <li>Send Upto 3 GB</li>
+             
+            </ul>
+        </div>
+          <div class="btn">Learn More</div>
+
+        </div>
+        <div class="card active">
+          <h4>Professional</h4>
+          <h2 class="price"><span class="dollar">&dollar;</span>24.99</h2>
+
+          <div class="details">
+              <ul>
+                <li>1 TB Storage</li>
+                <li>5 Users Allowed</li>
+                <li>Send upto 10 GB</li>
+                
+              </ul>
+          </div>
+
+          <div class="btn">Learn More</div>
+        </div>
+        <div class="card active">
+          <h4>Master</h4>
+          <h2 class="price"><span class="dollar">&dollar;</span>39.99</h2>
+          <div class="details">
+            <ul>
+              <li>2 TB Storage</li>
+              <li>10 Users Allowed</li>
+              <li>Send Upto 20 GB</li>
+              
+            </ul>
+        </div>
+          <div class="btn">Learn More</div>
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+  </body>
+</html>
