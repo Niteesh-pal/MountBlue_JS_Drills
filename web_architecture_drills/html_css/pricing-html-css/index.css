@@ -47,16 +47,6 @@ h4{
     cursor: pointer;
     position: relative;
 }
-input:checked + .button{
-    background-color: hsl(237, 63%, 64%);
-}
-input:checked + .button::before{
-    transform: translateX(-19px);
-}
-input{
-    display: none;
-}
-
 .button::before{
     position:absolute;
     content: "";
@@ -67,6 +57,17 @@ input{
     border-radius: 100%;
     margin: 1px;
 }
+input:checked + .button{
+    background-color: hsl(237, 63%, 64%);
+}
+input:checked + .button::before{
+    transform: translateX(-19px);
+}
+input{
+    display: none;
+}
+
+
 .heading{
    display: flex;
    flex-direction: column;
@@ -93,10 +94,12 @@ input{
     display: flex;
     justify-content: center;
     padding: 3rem 2rem;
+
 }
 .card{
     width: 21%;
-    height:20%;
+    /* height: 30%; */
+    height:27rem;
     /* border:1px solid black; */
     display: flex;
     flex-direction: column;
@@ -124,15 +127,17 @@ input{
     background: white;
     color: #6e6ed2;
 }
-.active:hover > .details li, .active:hover > .price{
+.active:hover > .details li:nth-child(1){
+    border-top: 0.2px solid rgb(229, 229, 229);
+}
+.active:hover > .details li{
     border-bottom: 0.2px solid rgb(229, 229, 229);
 }
 .price{
     font-size: 54px;
     padding:1.6rem 5px;
-    border-bottom: 1px solid grey;
+    /* border-bottom: 1px solid grey; */
     /* border: 1px solid black; */
-    width: 80%;
     text-align: center;
     
 }
@@ -149,19 +154,23 @@ ul{
 }
 
 ul li{
-    width: 95%;
+    width: 100%;
     font-size: 15px;
     font-weight: 500;
-    padding: 10px 5px;
+    padding: 15px 5px;
     border-bottom:1px solid grey;
     justify-content: center;
     letter-spacing: 0px;
+}
+ul li:nth-child(1){
+    width: 100%;
+    border-top: 1px solid grey;
 }
 
 .btn{
     width:85%;
     height:2.5rem;
-    margin-top: 2rem;
+    margin-torem;
     /* border: 1px solid black; */
     display: flex;
     justify-content: center;
